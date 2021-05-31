@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous"/>
+    </head>
+    <body>
+        <div class="center">
+            <div class="row">
+                <h1>Rock Paper Scissor</h1>
+                <h2>Game</h2>
+            </div>
+            <div class="row">
+                 <div>
+                     <button class="button" value=0 onclick="playgame(this.value)">
+                        Rock
+                    </button>
+                     <button class="button" value=1 onclick="playgame(this.value)">
+                         Paper
+                    </button>
+                     <button class="button" value=2 onclick="playgame(this.value)">
+                         Scissor
+                    </button>
+                    </div>
+            </div>
+        </div>
+        <script>
+            playgame =(val) =>{
+                console.log(val)
+            }
+        </script>
+    </body>
+</html>
