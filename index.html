@@ -20,12 +20,52 @@
                      <button class="button" value=2 onclick="playgame(this.value)">
                          Scissor
                     </button>
-                    </div>
+                </div>
+            </div>
+            <div class="center-row">
+                <div class="row-item">
+                    <p id="human">Human: </p>
+                </div>
+                <div class="row-item">
+                    <p id="bot">Bot: </p>
+                </div>
+            </div>
+            <div class="row">
+                <h1 id="result"></h1>
             </div>
         </div>
         <script>
             playgame =(val) =>{
-                console.log(val)
+                // bot generate number 
+                // 0 = rock, 1 = paper, 2 = scissor
+                result = {
+                    0: 'Rock',
+                    1: 'Paper',
+                    2: 'Scissor'
+                }
+                output = "Tie"
+                x = parseInt(Math.floor(Math.random() * 3))
+                val = parseInt(val)
+                console.log(result[x])
+                console.log(result[val])
+                console.log(result[x]===result[val])
+                document.getElementById("human").innerHTML = "Human: "+result[val]
+                document.getElementById("bot").innerHTML = "Bot: "+result[x]
+                if(result[x]===result[val]){
+                    // tie
+                    console.log('tie')
+                    
+                }
+                else if((x===0 && val===1) || (x===1&&val===2) || (x===2&&val===0)){
+                    console.log('Human win')
+                    output = "Human win"
+                }
+                else{
+                    console.log('Bot win')
+                    output = "Bot win"
+                }
+                document.getElementById("result").innerHTML = output
+
             }
         </script>
     </body>
